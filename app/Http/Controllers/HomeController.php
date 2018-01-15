@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\menu;
 
 class HomeController extends Controller
@@ -50,7 +49,7 @@ class HomeController extends Controller
         ];
         */
 
-        $table_menus = DB::table('recipes_tests')->get();
+        $table_menus = DB::table('menus')->get();
 
         return view('menus', ['table_menus'=>$table_menus]);
     }
