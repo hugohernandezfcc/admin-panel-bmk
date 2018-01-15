@@ -42,8 +42,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                    
-                    
+                    @foreach ($menus as $key=>$menu)
+                        <tr>
+                            <td>{{ $menu['text']}}</td>
+                            <td>{{ $menu['order']}}</td>
+                            <td>{{ $menu['label']}}</td>
+                            <td>{{ $menu['icon']}}</td>
+                            <td>{{ $menu['label_color']}}</td>
+                            <td>{{ $menu['url']}}</td>
+                            <td>{{ $menu['to']}}</td>
+                            <td>{{ $menu['typeitem']}}</td>
+                            <td>{{ $menu['parent']}}</td>
+                        </tr>
+                    @endforeach
                 <tfoot>
                <tr>
                   <th>Text</th>
