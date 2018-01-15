@@ -30,21 +30,42 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Title</th>
-                  <th>Description</th>
+                  <th>Text</th>
+                  <th>Order</th>
+                  <th>Label</th>
+                  <th>Icon</th>
+                  <th>Label Color</th>
+                  <th>URL</th>
+                  <th>To</th>
+                  <th>Type Item</th>
+                  <th>Parent</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($notes as $note)
+                    @foreach ($table_menus as $table_menu)
                         <tr>
-                            <td>{{ $note['title']}}</td>
-                            <td>{{ $note['body']}}</td>
+                            <td>{{ $table_menu['text']}}</td>
+                            <td>{{ $table_menu['order']}}</td>
+                            <td>{{ $table_menu['label']}}</td>
+                            <td>{{ $table_menu['icon']}}</td>
+                            <td>{{ $table_menu['label_color']}}</td>
+                            <td>{{ $table_menu['url']}}</td>
+                            <td>{{ $table_menu['to']}}</td>
+                            <td>{{ $table_menu['type_item']}}</td>
+                            <td>{{ $table_menu['parent']}}</td>
                         </tr>
                     @endforeach
                 <tfoot>
                <tr>
-                  <th>Title</th>
-                  <th>Description</th>
+                  <th>Text</th>
+                  <th>Order</th>
+                  <th>Label</th>
+                  <th>Icon</th>
+                  <th>Label Color</th>
+                  <th>URL</th>
+                  <th>To</th>
+                  <th>Type Item</th>
+                  <th>Parent</th>
                 </tr>
                 </tfoot>
               </table>

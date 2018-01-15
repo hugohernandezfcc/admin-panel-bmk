@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -33,6 +34,7 @@ class HomeController extends Controller
 
     public function menus()
     {
+        /*
         $notes = [
             [
                 'title' => 'Rutas Laravel',
@@ -44,8 +46,11 @@ class HomeController extends Controller
                 'body' => 'Blade es el motor de plantillas de Laravel',
                 'important' => false 
             ]
-        ];  
-        
-        return view('menus', ['notes'=>$notes]);
+        ];
+        */
+
+        $table_menus = DB::table('menus')->get();
+
+        return view('menus', ['table_menus'=>$table_menus]);
     }
 }
