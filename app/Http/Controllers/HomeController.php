@@ -52,7 +52,7 @@ class HomeController extends Controller
         */
         
 
-        $menus = DB::table('menus')->get();
+        $menus = DB::table('menu')->get();
 
         return view('menus', ['menus'=>$menus]);
     }
