@@ -35,12 +35,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
                     @foreach ($notes as $note)
-                        <td>{{ $note['title']}}</td>
-                        <td>{{ $note['body']}}</td>
+                        <tr>
+                            <td>{{ $note['title']}}</td>
+                            <td>{{ $note['body']}}</td>
+                        </tr>
                     @endforeach
-                </tr>
                 <tfoot>
                 <tr>
                   <th>title</th>
