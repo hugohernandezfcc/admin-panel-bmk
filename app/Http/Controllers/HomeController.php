@@ -26,12 +26,12 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function prueba()
+    public function antonioPrueba()
     {
-        return view('home', ['lastName'=>'Gervacio']);
+        return view('home', ['variable1'=>'Gervacio']);
     }
 
-    public function menus()
+     public function menus()
     {
         $notes = [
             [
