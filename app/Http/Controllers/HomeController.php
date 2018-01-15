@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function inicio()
     {
-        return view('home', ['lastName'=>'Gervacio Téllez']);
+        return view('home', ['lastName'=>'Gervacio']);
     }
 
     public function menus()
