@@ -46,6 +46,6 @@ class HomeController extends Controller
             ]
         ];  
         $ = array();
-        return view('menus', ['notes'=>'$notes']);
+        return view('menus', ['notes'=>$notes]);
     }
 }
