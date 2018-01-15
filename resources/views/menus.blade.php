@@ -33,7 +33,7 @@
                   <th>Text</th>
                   <th>Order</th>
                   <th>Label</th>
-                  <th>Icon</th>
+                  <th>Icon </th>
                   <th>Label Color</th>
                   <th>URL</th>
                   <th>To</th>
