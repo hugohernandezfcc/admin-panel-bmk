@@ -425,7 +425,7 @@
                   <td>C</td>
                 </tr>
                 <tr>
-                  <td>Other browser</td>
+                  <td>Other browsers</td>
                   <td>All others</td>
                   <td>-</td>
                   <td>-</td>
