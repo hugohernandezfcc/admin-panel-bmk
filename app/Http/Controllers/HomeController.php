@@ -26,7 +26,7 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function inicio()
+    public function prueba()
     {
         return view('home', ['lastName'=>'Gervacio']);
     }

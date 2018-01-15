@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/inicio', 'HomeController@inicio')->name('inicio');
+Route::get('/prueba', 'HomeController@prueba')->name('prueba');
 
 Route::get('/menus', 'HomeController@menus')->name('menus');
 
