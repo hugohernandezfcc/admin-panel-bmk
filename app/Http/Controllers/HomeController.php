@@ -36,8 +36,8 @@ class HomeController extends Controller
 
     public function menus()
     {
-        /*
-        $notes = [
+        
+        $menus = [
             [
                 'title' => 'Rutas Laravel',
                 'body' => 'Las rutas se definen en el archivo routes/web.php',
@@ -49,9 +49,8 @@ class HomeController extends Controller
                 'important' => false 
             ]
         ];
-        */
 
-        $menus = DB::table('menus')->get();
+        //$menus = DB::table('menus')->get();
 
         return view('menus', ['menus'=>$menus]);
     }

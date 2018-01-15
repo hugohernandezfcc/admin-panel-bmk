@@ -42,7 +42,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($menus as $key=>$menu)
+                    @foreach ($menus as $menu)
                         <tr>
                             <td>{{ $menu['text']}}</td>
                             <td>{{ $menu['order']}}</td>
