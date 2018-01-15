@@ -3,7 +3,7 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1>Luis Antonio {{$variable1}}</h1>
+    <h1>Bienvenido a tu pagina de inicio Luis Antonio {{$lastName}}</h1>
 @stop
 
 @section('content')

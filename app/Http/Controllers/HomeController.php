@@ -26,8 +26,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function antonioPrueba()
+    public function inicio()
     {
-        return view('home', ['variable1'=>'Gervacio']);
+        return view('home', ['lastName'=>'Gervacio Téllez']);
     }
 }
