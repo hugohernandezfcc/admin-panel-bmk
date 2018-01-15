@@ -12,7 +12,7 @@
     <section class="content-header">
       <h1>
         Menus
-        <small>advanced tables</small>
+        <small>example menu(notes)</small>
       </h1>
     </section>
 
@@ -22,7 +22,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Hover Data Table</h3>
+              <h3 class="box-title">Example Notes</h3>
             </div>
 
             <!-- /.box-header -->
@@ -30,8 +30,8 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>title</th>
-                  <th>body</th>
+                  <th>Title</th>
+                  <th>Description</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,9 +42,9 @@
                         </tr>
                     @endforeach
                 <tfoot>
-                <tr>
-                  <th>title</th>
-                  <th>body</th>
+               <tr>
+                  <th>Title</th>
+                  <th>Description</th>
                 </tr>
                 </tfoot>
               </table>
