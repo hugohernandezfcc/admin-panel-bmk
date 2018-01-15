@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use App\menu;
 
 class HomeController extends Controller
@@ -34,8 +36,8 @@ class HomeController extends Controller
 
     public function menus()
     {
-        
-        $table_menus = [
+        /*
+        $notes = [
             [
                 'title' => 'Rutas Laravel',
                 'body' => 'Las rutas se definen en el archivo routes/web.php',
@@ -47,10 +49,11 @@ class HomeController extends Controller
                 'important' => false 
             ]
         ];
+        */
         
 
-        //$table_menus = DB::table('menus')->get();
+        $menus = DB::table('menus')->get();
 
-        return view('menus', ['table_menus'=>$table_menus]);
+        return view('menus', ['menus'=>$menus]);
     }
 }

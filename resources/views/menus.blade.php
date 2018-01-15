@@ -12,7 +12,7 @@
     <section class="content-header">
       <h1>
         Menus
-        <small>example menu(notes)</small>
+        <small>menus database</small>
       </h1>
     </section>
 
@@ -22,7 +22,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Example Notes</h3>
+              <h3 class="box-title">menus database</h3>
             </div>
 
             <!-- /.box-header -->
@@ -42,17 +42,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($table_menus as $table_menu)
+                    @foreach ($menus as $menu)
                         <tr>
-                            <td>{{ $table_menu['text']}}</td>
-                            <td>{{ $table_menu['order']}}</td>
-                            <td>{{ $table_menu['label']}}</td>
-                            <td>{{ $table_menu['icon']}}</td>
-                            <td>{{ $table_menu['label_color']}}</td>
-                            <td>{{ $table_menu['url']}}</td>
-                            <td>{{ $table_menu['to']}}</td>
-                            <td>{{ $table_menu['typeitem']}}</td>
-                            <td>{{ $table_menu['parent']}}</td>
+                            <td>{{ $menu['text']}}</td>
+                            <td>{{ $menu['order']}}</td>
+                            <td>{{ $menu['label']}}</td>
+                            <td>{{ $menu['icon']}}</td>
+                            <td>{{ $menu['label_color']}}</td>
+                            <td>{{ $menu['url']}}</td>
+                            <td>{{ $menu['to']}}</td>
+                            <td>{{ $menu['typeitem']}}</td>
+                            <td>{{ $menu['parent']}}</td>
                         </tr>
                     @endforeach
                 <tfoot>
