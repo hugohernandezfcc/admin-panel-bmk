@@ -51,7 +51,7 @@
                             <td>{{ $table_menu['label_color']}}</td>
                             <td>{{ $table_menu['url']}}</td>
                             <td>{{ $table_menu['to']}}</td>
-                            <td>{{ $table_menu['type_item']}}</td>
+                            <td>{{ $table_menu['typeitem']}}</td>
                             <td>{{ $table_menu['parent']}}</td>
                         </tr>
                     @endforeach
