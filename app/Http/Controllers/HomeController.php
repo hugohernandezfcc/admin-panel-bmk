@@ -30,22 +30,4 @@ class HomeController extends Controller
     {
         return view('home', ['variable1'=>'Gervacio']);
     }
-
-     public function menus()
-    {
-        $notes = [
-            [
-                'title' => 'Rutas Laravel',
-                'body' => 'Las rutas se definen en el archivo routes/web.php',
-                'important' => true
-            ],
-            [
-                'title' => 'Blade',
-                'body' => 'Blade es el motor de plantillas de Laravel',
-                'important' => false 
-            ]
-        ];  
-        $ = array();
-        return view('menus', ['notes'=>$notes]);
-    }
 }
