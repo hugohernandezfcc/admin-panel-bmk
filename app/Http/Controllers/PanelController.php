@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\menu;
+use App\privacy_statement;
+use App\SupportTycket;
+use App\professional_information;
 use DB;
 
 class PanelController extends Controller
