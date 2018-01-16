@@ -33,7 +33,7 @@ Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 Route::get('/pruebaDB', function () {
    $table = DB::table('privacy_statement')->get();
    foreach ($table as $ps){
-   	echo $ps->id;
+   	echo $ps->id.'<br><br>';
    }
    
 });
