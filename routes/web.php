@@ -24,9 +24,11 @@ Route::get('/menus', 'PanelController@menus')->name('menus');
 
 Route::get('/aviso-de-privacidad', 'PanelController@avisoPrivacidad')->name('avisoPrivacidad');
 
+Route::get('/tickets-de-ayuda', 'PanelController@ticketsAyuda')->name('ticketsAyuda');
+
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () {
-   $table = DB::table('privacy_statement')->get();
+   $table = DB::table('support_tickets')->get();
    echo $table;
 });

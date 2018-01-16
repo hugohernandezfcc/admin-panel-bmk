@@ -45,4 +45,10 @@ class PanelController extends Controller
         $statements = DB::table('privacy_statement')->get();
         return view('avisoPrivacidad', ['statements'=>$statements]);
     }
+
+    public function ticketsAyuda()
+    {
+        $tickets = DB::table('support_tickets')->get();
+        return view('ticketsAyuda', ['tickets'=>$tickets]);
+    }
 }
