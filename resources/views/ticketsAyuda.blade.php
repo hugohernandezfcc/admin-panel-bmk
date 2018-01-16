@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'App medica - Aviso de Privacidad')
+@section('title', 'App medica - Tickets de Ayuda')
 
 @section('content_header')
-    <h1>Aviso de Privacidad</h1>
+    <h1>Tickets de Ayuda</h1>
 @stop
 
 @section('content')
