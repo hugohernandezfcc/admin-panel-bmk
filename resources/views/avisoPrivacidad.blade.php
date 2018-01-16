@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'App medica - Menus')
+@section('title', 'App medica - Aviso de Privacidad')
 
 @section('content_header')
-    <h1>Admin Menus</h1>
+    <h1>Admin Aviso de Privacidad</h1>
 @stop
 
 @section('content')
@@ -13,9 +13,9 @@
               <table id="example" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>id</th>
-                  <th>description</th>
-                  <th>created_at</th>
+                  <th>Id</th>
+                  <th>Description</th>
+                  <th>Created at</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -29,9 +29,9 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>id</th>
-                  <th>description</th>
-                  <th>created_at</th>
+                  <th>Id</th>
+                  <th>Description</th>
+                  <th>Created at</th>
                 </tr>
                 </tfoot>
               </table>
