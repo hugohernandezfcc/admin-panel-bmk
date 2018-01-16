@@ -32,5 +32,8 @@ Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () {
    $table = DB::table('privacy_statement')->get();
-   echo $table;
+   foreach ($table as $ps){
+   	echo $ps;
+   }
+   
 });
