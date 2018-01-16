@@ -25,6 +25,6 @@ Route::get('/menus', 'PanelController@menus')->name('menus');
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () { 
-   $menus = DB::table('menus')->get();
-   echo $menus;
+   $table = DB::table('privacy_statement')->get();
+   echo $table;
 });
