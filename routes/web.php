@@ -22,9 +22,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/menus', 'PanelController@menus')->name('menus');
 //Route::get('menus',['as'=>'factura','uses'=>'HomeController@menus']);
 
+Route::get('/aviso-de-privacidad', 'PanelController@avisoPrivacidad')->name('avisoPrivacidad');
+
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
-Route::get('/pruebaDB', function () { 
+Route::get('/pruebaDB', function () {
    $table = DB::table('privacy_statement')->get();
    echo $table;
 });

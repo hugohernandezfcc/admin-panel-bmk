@@ -36,23 +36,13 @@ class PanelController extends Controller
 
     public function menus()
     {
-        /*
-        $menus = [
-            [
-                'title' => 'Rutas Laravel',
-                'body' => 'Las rutas se definen en el archivo routes/web.php',
-                'important' => true
-            ],
-            [
-                'title' => 'Blade',
-                'body' => 'Blade es el motor de plantillas de Laravel',
-                'important' => false 
-            ]
-        ];
-        */
-
         $menus = DB::table('menus')->get();
-
         return view('menus', ['menus'=>$menus]);
+    }
+
+    public function avisoPrivacidad()
+    {
+        $statements = DB::table('privacy_statement')->get();
+        return view('avisoPrivacidad', ['statements'=>$statements]);
     }
 }
