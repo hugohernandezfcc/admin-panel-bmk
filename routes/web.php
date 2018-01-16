@@ -19,10 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/menus', 'panelController@menus')->name('menus');
+Route::get('/menus', 'PanelController@menus')->name('menus');
 //Route::get('menus',['as'=>'factura','uses'=>'HomeController@menus']);
 
-Route::get('/prueba', 'panelController@prueba')->name('prueba');
+Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () { 
    $menus = DB::table('menus')->get();
