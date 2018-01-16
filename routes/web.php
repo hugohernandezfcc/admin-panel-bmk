@@ -31,9 +31,8 @@ Route::get('/medicos', 'PanelController@medicos')->name('medicos');
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () {
-   $table = DB::table('privacy_statement')->get();
-   foreach ($table as $ps){
-   	echo $ps->id.'<br><br>';
-   }
+   $table = DB::table('privacy_statement')->where('id','5')->first();
+   
+   	echo $table->description;
    
 });
