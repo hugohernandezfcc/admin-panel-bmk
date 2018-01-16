@@ -31,8 +31,30 @@ Route::get('/medicos', 'PanelController@medicos')->name('medicos');
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () {
-   $table = DB::table('privacy_statement')->pluck('description');
-   foreach ($table as $descriptions) {
-   	echo $descriptions.'<br><br>';
+	
+	/* 
+		//Retrieving All Rows From A Table
+		$users = DB::table('users')->get();
+
+		foreach ($users as $user) {
+			echo $user->name;
+		}
+
+		//Retrieving A Single Row / Column From A Table
+		$user = DB::table('users')->where('name', 'John')->first();
+		
+		echo $user->name;
+		
+		//Retrieving A List Of Column Values
+		$titles = DB::table('roles')->pluck('title');
+
+		foreach ($titles as $title) {
+			echo $title;
+		}
+
+	*/
+   $table = DB::table('privacy_statement')->pluck('description', 'id');
+   foreach ($table as $id => $description) {
+   	echo $description.'<br><br>';
    }
 });
