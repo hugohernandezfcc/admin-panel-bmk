@@ -42,10 +42,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($menus as $menu)
+                    @foreach ($menus as $key => $menu)
                         <tr>
-                            <td>{{ $menu -> text]}}</td>
-                            
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
+                            <td>{{ $menu -> text}}</td>
                         </tr>
                     @endforeach
                 <tfoot>

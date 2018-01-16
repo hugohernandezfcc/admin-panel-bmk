@@ -36,7 +36,7 @@ class HomeController extends Controller
 
     public function menus()
     {
-        
+        /*
         $menus = [
             [
                 'title' => 'Rutas Laravel',
@@ -49,8 +49,9 @@ class HomeController extends Controller
                 'important' => false 
             ]
         ];
+        */
 
-        //$menus = DB::table('menus')->get();
+        $menus = DB::table('menus')->get();
 
         return view('menus', ['menus'=>$menus]);
     }
