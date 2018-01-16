@@ -31,6 +31,6 @@ Route::get('/medicos', 'PanelController@medicos')->name('medicos');
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () {
-   $table = DB::table('professional_information')->get();
+   $table = DB::table('user')->get();
    echo $table;
 });
