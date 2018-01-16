@@ -51,4 +51,10 @@ class PanelController extends Controller
         $tickets = DB::table('support_tickets')->get();
         return view('ticketsAyuda', ['tickets'=>$tickets]);
     }
+
+    public function medicos()
+    {
+        $medicos = DB::table('professional_information')->get();
+        return view('medicos', ['medicos'=>$medicos]);
+    }
 }

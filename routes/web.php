@@ -26,9 +26,11 @@ Route::get('/aviso-de-privacidad', 'PanelController@avisoPrivacidad')->name('avi
 
 Route::get('/tickets-de-ayuda', 'PanelController@ticketsAyuda')->name('ticketsAyuda');
 
+Route::get('/medicos', 'PanelController@medicos')->name('medicos');
+
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () {
-   $table = DB::table('support_tickets')->get();
+   $table = DB::table('professional_information')->get();
    echo $table;
 });
