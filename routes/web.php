@@ -28,6 +28,4 @@ Route::get('/pruebas', function () {
    echo $menus;
 });
 
-//Route::get('menus',['as'=>'factura','uses'=>'HomeController@menus']
-	
-);
+//Route::get('menus',['as'=>'factura','uses'=>'HomeController@menus']);
