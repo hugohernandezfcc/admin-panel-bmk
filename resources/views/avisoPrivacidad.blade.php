@@ -3,7 +3,7 @@
 @section('title', 'App medica - Aviso de Privacidad')
 
 @section('content_header')
-    <h1>Admin Aviso de Privacidad</h1>
+    <h1>Aviso de Privacidad</h1>
 @stop
 
 @section('content')

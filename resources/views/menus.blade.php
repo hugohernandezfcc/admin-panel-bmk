@@ -3,7 +3,7 @@
 @section('title', 'App medica - Menus')
 
 @section('content_header')
-    <h1>Admin Menus</h1>
+    <h1>Menus</h1>
 @stop
 
 @section('content')
