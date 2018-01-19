@@ -61,9 +61,9 @@ Route::get('/pruebaDB', function () {
 	*/
 		
 
-		$tables = DB::select("SELECT table_schema,table_name, table_catalog FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name;");
-		foreach($tables as $table)
-		{
-		      echo $table;
-		}
+		$tables = DB::select("SELECT table_schema,table_name, table_catalog FROM information_schema.tables WHERE table_catalog = 'd5dp3j0qgqlaai' AND table_type = 'pgsql' AND table_schema = 'public' ORDER BY table_name;");
+		foreach ($tables as $table) {
+    foreach ($table as $key => $value)
+        echo $value;
+}
 });
