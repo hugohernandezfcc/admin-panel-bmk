@@ -51,10 +51,17 @@ Route::get('/pruebaDB', function () {
 		foreach ($titles as $title) {
 			echo $title;
 		}
+		//Or, you may also specify a custom key column for the returned Collection:
+		$roles = DB::table('roles')->pluck('title', 'name');
 
+		foreach ($roles as $name => $title) {
+		    echo $title;
+		}
 	*/
-   $table = DB::table('privacy_statement')->pluck('description', 'id');
-   foreach ($table as $id => $description) {
-   	echo $description.'<br><br>';
-   }
+		$tables = DB::select('SHOW TABLES');
+		foreach($tables as $table)
+		{
+		      echo $table->privacy_statement;
+		}
+
 });
