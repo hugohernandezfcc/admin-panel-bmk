@@ -60,7 +60,8 @@ Route::get('/pruebaDB', function () {
 	*/
 		$tickets = DB::table('support_tickets')->get();
 		echo $tickets;
-		
+		/*
 		$columns = DB::getSchemaBuilder()->getColumnListing('support_tickets');
 		echo $columns;
+		*/
 });
