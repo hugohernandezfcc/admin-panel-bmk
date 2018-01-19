@@ -61,7 +61,7 @@ Route::get('/pruebaDB', function () {
 		/*
 		$query = 'select table_schema,table_name, table_catalog from information_schema.tables WHERE table_catalog = \'d5dp3j0qgqlaai\' AND table_type = \'pgsql\' AND table_schema = \'public\' ORDER BY table_name;';
 		
-		echo $query;
+		echo $query; 
 		*/
 
 		$tables = DB::getSchemaBuilder()->getColumnListing()->table('privacy_statement');
