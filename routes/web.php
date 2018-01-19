@@ -58,10 +58,10 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
-		$tickets = DB::table('support_tickets')->get();
-		echo $tickets;
+		$menus = DB::table('menus')->get();
+		echo $menus;
 		/*
-		$columns = DB::getSchemaBuilder()->getColumnListing('support_tickets');
+		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
 		*/
 });
