@@ -62,7 +62,7 @@ Route::get('/pruebaDB', function () {
 		
 		echo $query;
 
-		$tables = DB::select('select * from user');
+		$tables = DB::select('SHOW TABLES');
 		//$tables = DB::select('SHOW TABLES');
 		echo $tables;
 });
