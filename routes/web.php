@@ -64,6 +64,6 @@ Route::get('/pruebaDB', function () {
 		echo $query; 
 		*/
 
-		$tables = DB::connection('pgsql')->getSchemaBuilder()->getColumnListing('privacy_statement');
+		$tables = Schema::getSchemaBuilder()->getColumnListing('privacy_statement');
 		echo $tables;
 });
