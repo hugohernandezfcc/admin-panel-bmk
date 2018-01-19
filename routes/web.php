@@ -58,12 +58,9 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
-		/*
-		$query = 'select table_schema,table_name, table_catalog from information_schema.tables WHERE table_catalog = \'d5dp3j0qgqlaai\' AND table_type = \'pgsql\' AND table_schema = \'public\' ORDER BY table_name;';
+		$tickets = DB::table('support_tickets')->get();
+		echo $tickets;
 		
-		echo $query; 
-		*/
-
-		$columns = Schema::getColumnListing('support_tickets');
+		$columns = DB::getSchemaBuilder()->getColumnListing('support_tickets');
 		echo $columns;
 });
