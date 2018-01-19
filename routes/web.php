@@ -62,7 +62,7 @@ Route::get('/pruebaDB', function () {
 		
 		echo $query;
 
-		$tables = DBconnection('pgsql')->select('select * from privacy_statement');
+		$tables = DB::connection('pgsql')->select('select * from privacy_statement');
 		//$tables = DB::select('SHOW TABLES');
 		echo $tables;
 });
