@@ -58,7 +58,7 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
-		$query = 'SELECT table_schema,table_name, table_catalog'.' FROM information_schema.tables WHERE table_catalog = \'d5dp3j0qgqlaai\' AND table_type = \'pgsql\' AND table_schema = \'public\' ORDER BY table_name;';
+		$query = 'SELECT table_schema,table_name, table_catalog'.' FROM information_schema.tables WHERE table_schema = \'public\' ORDER BY table_name;';
 		
 		echo $query;
 
