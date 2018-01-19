@@ -58,12 +58,12 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
-		/*
+		
 		$tables = DB::select("SELECT table_schema,table_name, table_catalog FROM information_schema.tables WHERE table_catalog = 'DB_DATABASE' AND table_type = 'BASE TABLE' AND table_schema = 'public' ORDER BY table_name;")
 		foreach($tables as $table)
 		{
 		      echo $table->privacy_statements;
 		}
-		*/
+		
 
 });
