@@ -58,11 +58,12 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
+		/*
 		$query = 'select table_schema,table_name, table_catalog from information_schema.tables WHERE table_catalog = \'d5dp3j0qgqlaai\' AND table_type = \'pgsql\' AND table_schema = \'public\' ORDER BY table_name;';
 		
 		echo $query;
+		*/
 
-		$tables = DB::getSchemaBuilder()->getColumnListing('table');
-		//$tables = DB::select('SHOW TABLES');
-		//echo $tables;
+		$tables = DB::getSchemaBuilder()->getColumnListing('support_tickets');
+		echo $tables;
 });
