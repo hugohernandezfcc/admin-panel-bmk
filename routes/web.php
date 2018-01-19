@@ -62,7 +62,7 @@ Route::get('/pruebaDB', function () {
 		
 		echo $query;
 
-		$tables = Schema::getColumnListing();
+		$tables = DB::getSchemaBuilder()->getColumnListing('table');
 		//$tables = DB::select('SHOW TABLES');
-		echo $tables;
+		//echo $tables;
 });
