@@ -62,7 +62,7 @@ Route::get('/pruebaDB', function () {
 		
 		echo $query;
 
-		$tables = select('select * from privacy_statement');
+		$tables = DB::getSchemaBuilder()->getColumnListing('privacy_statement');
 		//$tables = DB::select('SHOW TABLES');
 		echo $tables;
 });
