@@ -58,11 +58,11 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
-		$query = 'select table_schema,table_name, table_catalog from information_schema.tables ;';
+		$query = 'select table_schema,table_name, table_catalog from information_schema.tables WHERE table_catalog = \'d5dp3j0qgqlaai\' AND table_type = \'pgsql\' AND table_schema = \'public\' ORDER BY table_name;';
 		
 		echo $query;
 
-		$tables = DBconnection('pgsql')->select($query);
+		$tables = DBconnection('pgsql')->select('select * from privacy_statement');
 		//$tables = DB::select('SHOW TABLES');
 		echo $tables;
 });
