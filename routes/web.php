@@ -61,7 +61,7 @@ Route::get('/pruebaDB', function () {
 		$tables = DB::select('SHOW TABLES');
 		foreach($tables as $table)
 		{
-		      echo $table->privacy_statement;
+		      echo $table->'privacy_statement';
 		}
 
 });
