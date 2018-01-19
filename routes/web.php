@@ -55,12 +55,13 @@ Route::get('/pruebaDB', function () {
 		$roles = DB::table('roles')->pluck('title', 'name');
 
 		foreach ($roles as $name => $title) {
+			
 		    echo $title;
 		}
 	*/
 		
 
-		$tables = DB::select("SELECT table_schema,table_name, table_catalog FROM information_schema.tables WHERE table_catalog = 'DB_DATABASE' AND table_type = 'BASE TABLE' AND table_schema = 'public' ORDER BY table_name;");
+		$tables = DB::select("SELECT table_schema,table_name, table_catalog FROM information_schema.tables WHERE table_catalog = 'd5dp3j0qgqlaai' AND table_type = 'BASE TABLE' AND table_schema = 'public' ORDER BY table_name;");
 		foreach($tables as $table)
 		{
 		      echo $table->privacy_statement;
