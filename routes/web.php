@@ -61,7 +61,7 @@ Route::get('/pruebaDB', function () {
 		$menus = DB::table('menus')->get();
 		echo $menus.'<br><br>';
 		
-		$columns = DB::getColumnListing('menus');
+		$columns = DB::table('menus')->getColumnListing();
 		echo $columns;
 		
 });
