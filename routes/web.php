@@ -58,11 +58,14 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
-		$menus = DB::table('menus')->get();
-		echo $menus.'<br><br>';
-		
-		$columns =array_keys($menus->attributes);
-
+		if(Schema::hasTable('menus'))
+		{
+			$menus = DB::table('menus')->get();
+			echo $menus.'<br><br>';
+		}
+		/*
+		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
+		*/
 		
 });
