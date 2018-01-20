@@ -75,10 +75,10 @@ Route::get('/pruebaDB', function () {
 		}
 		*/
 		Schema::table('menus',function($table))
-			{
-				$table->getColumnListing();
-				echo $table;
-			}
+		{
+			$table->getColumnListing();
+			echo $table;
+		});
 		/*
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
