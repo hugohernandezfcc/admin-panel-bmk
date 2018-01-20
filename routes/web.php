@@ -76,8 +76,8 @@ Route::get('/pruebaDB', function () {
 		*/
 		Schema::table('menus',function($table)
 		{
-			$table->getCellAttributes();
-			echo $table;
+			$column = $table->getCellAttributes();
+			echo $column;
 		});
 		/*
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
