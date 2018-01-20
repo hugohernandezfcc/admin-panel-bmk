@@ -59,9 +59,9 @@ Route::get('/pruebaDB', function () {
 		}
 	*/
 		$menus = DB::table('menus')->get();
-		echo $menus;
+		echo $menus.'<br><br>';
 		
-		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
+		$columns = DB::getColumnListing('menus');
 		echo $columns;
 		
 });
