@@ -58,10 +58,25 @@ Route::get('/pruebaDB', function () {
 		    echo $title;
 		}
 	*/
+		/*
+		//Checking for existence of columns
+		if (Schema::hasColumn('menus', 'if'))
+		{
+		    //code
+		}
+		*/
+
+		//Checking for existence of table
 		if(Schema::hasTable('menus'))
 		{
 			$menus = DB::table('menus')->get();
 			echo $menus.'<br><br>';
+
+			Schema::table('menus',function($table))
+			{
+				$table->getColumnListing();
+				echo $table;
+			}
 		}
 		/*
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
