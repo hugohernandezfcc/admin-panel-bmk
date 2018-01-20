@@ -66,18 +66,19 @@ Route::get('/pruebaDB', function () {
 		}
 		*/
 
+		/*
 		//Checking for existence of table
 		if(Schema::hasTable('menus'))
 		{
 			$menus = DB::table('menus')->get();
 			echo $menus.'<br><br>';
-
-			Schema::table('menus',function($table))
+		}
+		*/
+		Schema::table('menus',function($table))
 			{
 				$table->getColumnListing();
 				echo $table;
 			}
-		}
 		/*
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
