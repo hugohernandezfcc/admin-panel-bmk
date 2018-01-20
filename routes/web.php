@@ -60,8 +60,8 @@ Route::get('/pruebaDB', function () {
 	*/
 		$menus = DB::table('menus')->get();
 		echo $menus;
-		/*
+		
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
-		*/
+		
 });
