@@ -74,7 +74,7 @@ Route::get('/pruebaDB', function () {
 			echo $menus.'<br><br>';
 		}
 		*/
-		Schema::table('menus',function($table))
+		Schema::table('menus',function($table)
 		{
 			$table->getColumnListing();
 			echo $table;
