@@ -61,7 +61,8 @@ Route::get('/pruebaDB', function () {
 		$menus = DB::table('menus')->get();
 		echo $menus.'<br><br>';
 		
-		$columns =array_keys($menus->attributes)
+		$columns =array_keys($menus->attributes);
+
 		echo $columns;
 		
 });
