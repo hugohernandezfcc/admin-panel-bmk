@@ -87,6 +87,6 @@ Route::get('/pruebaDB', function () {
 		echo $columns;
 		*/
 
-		echo $this->getConnection()->getSchemaBuilder()->getColummListing($this->getTable());
-		
+		$table = $this->getConnection()->getSchemaBuilder()->getColummListing($this->getTable());
+		echo $table;
 });
