@@ -88,7 +88,16 @@ Route::get('/pruebaDB', function () {
 		*/
 
 		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information");
-		$allColumns = array();
+		$allColumns = [
+	    	[
+	    		'table' => 'table00',
+	    		'field' => 'field02'
+	    	],
+	    	[
+	    	 	'table' => 'table01',
+	    		'field' => 'field00'
+	    	]
+	    ];
 
         foreach ($allTables as $table)
         {
