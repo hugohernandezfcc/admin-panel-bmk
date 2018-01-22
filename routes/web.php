@@ -100,7 +100,7 @@ Route::get('/pruebaDB', function () {
                 {
                 	if(Schema::hasColumn($table, $column))
                 	{
-                		$type = Schema::getColumnType($table, $column);
+                		$type = Schema::getType($table, $column);
                     	//echo "[ ".$column." ]"." - type [ ".$type." ]"."<br>";
                     	echo "Yes, column ".$column." in table : ".$table." exist !"."<br>";
                 	}
