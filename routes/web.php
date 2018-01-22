@@ -87,6 +87,6 @@ Route::get('/pruebaDB', function () {
 		echo $columns;
 		*/
 
-		$columns = SchemaBuilder::getColumnListing('privacy_statement');
+		$columns = Schema::getColumnListing('privacy_statement');
 		echo $columns;
 });
