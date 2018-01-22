@@ -125,6 +125,6 @@ Route::get('/pruebaDB', function () {
         }
 
         foreach ($allColumns as $columnN) {
-        	echo $columnN;
+        	echo $columnN['table'];
         }
 });
