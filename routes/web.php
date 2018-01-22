@@ -100,7 +100,7 @@ Route::get('/pruebaDB', function () {
                 {
                     echo "[ ".$column." ]"."<br>";
                 }
-                 echo "<br><br>"."_____________";
+                 echo "<br>"."-----------------------"."<br>";
             }
             else
                 echo "Your table -> ".$table." not exist !"."<br>";
