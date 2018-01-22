@@ -87,7 +87,7 @@ Route::get('/pruebaDB', function () {
 		echo $columns;
 		*/
 
-		$allTables = Schema::getAllTables();
+		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
 
         foreach ($allTables as $table)
         {
