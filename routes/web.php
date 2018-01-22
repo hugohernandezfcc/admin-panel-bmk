@@ -90,8 +90,8 @@ Route::get('/pruebaDB', function () {
 
 		if(Schema::hasTable($table)
 		{
-			echo 'Yes, table : '.$table.' exist !';
+			echo "Yes, table : ".$table." exist !";
 		}
 		else
-			echo 'Your table not exist !';
+			echo "Your table not exist !";
 });
