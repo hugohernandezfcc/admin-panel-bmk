@@ -97,6 +97,7 @@ Route::get('/pruebaDB', function () {
                 echo "Table: [ ".$table." ]"."<br>"."Columns:"."<br>";
 
                 $columns = Schema::getColumnListing($table);
+                $counter = 0;
                 foreach ($columns as $column)
                 {
                 	/*
@@ -107,13 +108,14 @@ Route::get('/pruebaDB', function () {
                     	echo "Column: ".$column." in table : ".$table." exist !"."<br>";
                 	}
                     */
-                	$allColumns[][] = [
+                	$allColumns[$counter] = [
                 		[
                 			'table'=>$table,
                 			'field'=>$column
                 		]
                 	];     	 
                     echo "[ ".$column." ]"."<br>";
+                    $counter = $counter+1;
                 }
                 echo "<br>"."------------------------------------"."<br>";
             }
