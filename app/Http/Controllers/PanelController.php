@@ -60,4 +60,9 @@ class PanelController extends Controller
         $medicos = DB::table('professional_information')->get();
         return view('medicos', ['medicos'=>$medicos]);
     }
+
+    public function getColumns()
+    {
+        return $this->getConnection()->getSchemaBuilder()->getColummListing($this->getTable());
+    }
 }

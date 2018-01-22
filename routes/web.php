@@ -74,14 +74,19 @@ Route::get('/pruebaDB', function () {
 			echo $menus.'<br><br>';
 		}
 		*/
-		Schema::table('menus',function($table)
+
+		/*
+		Schema::table('menus', function($table)
 		{
-			$column = $table->getCellAttributes();
-			echo $column;
+			$table->getColumnListing();
 		});
+		*/
+
 		/*
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
 		*/
+
+		echo $this->getConnection()->getSchemaBuilder()->getColummListing($this->getTable());
 		
 });
