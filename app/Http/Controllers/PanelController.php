@@ -70,16 +70,18 @@ class PanelController extends Controller
         {
             if(Schema::hasTable($table))
             {
-                echo "Yes, table : ".$table." exist !";
+                echo "Yes, table : ".$table." exist !"."<br>";
 
                 $columns = Schema::getColumnListing($table);
                 foreach ($columns as $column)
                 {
-                    echo $column;
+                    $type = Schema::getColumnType($table, $column);
+                    echo "[ ".$column." ]"." - type [ ".$type." ]"."<br>";
                 }
+                 echo "<br>"."-----------------------"."<br>";
             }
             else
-                echo "Your table -> ".$table." not exist !";
+                echo "Your table -> ".$table." not exist !"."<br>";
         }
     }
 }

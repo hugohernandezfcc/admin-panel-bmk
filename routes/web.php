@@ -88,16 +88,6 @@ Route::get('/pruebaDB', function () {
 		*/
 
 		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information");
-		$allColumns = [
-	    	[
-	    		'table' => 'table00',
-	    		'field' => 'field02'
-	    	],
-	    	[
-	    	 	'table' => 'table01',
-	    		'field' => 'field00'
-	    	]
-	    ];
 
         foreach ($allTables as $table)
         {
@@ -108,8 +98,6 @@ Route::get('/pruebaDB', function () {
                 $columns = Schema::getColumnListing($table);
                 foreach ($columns as $column)
                 {
-                	$allColumns['table'] = $table;
-                	$allColumns['field'] = $column;
                     echo "[ ".$column." ]"."<br>";
                 }
                  echo "<br>"."-----------------------"."<br>";
@@ -117,6 +105,4 @@ Route::get('/pruebaDB', function () {
             else
                 echo "Your table -> ".$table." not exist !"."<br>";
         }
-
-        echo $allColumns;
 });
