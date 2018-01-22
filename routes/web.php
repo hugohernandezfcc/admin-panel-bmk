@@ -107,19 +107,17 @@ Route::get('/pruebaDB', function () {
                     	echo "Column: ".$column." in table : ".$table." exist !"."<br>";
                 	}
                     */
-                    $allTableColumns = $table;
-                	$allColumns[] = $column;
+                	$allColumns = [
+                		[
+                			'table'=>$table,
+                			'field'=>$column
+                		]
+                	];     	 
                     echo "[ ".$column." ]"."<br>";
                 }
-                 echo "<br>"."------------------------------------"."<br>";
+                echo "<br>"."------------------------------------"."<br>";
             }
             else
                 echo "Your table -> ".$table." not exist !"."<br>";
-        }
-
-        $totalTableColumns = array_map(null, $allTableColumns, $allColumns);
-        foreach ($totalTableColumns as $table)
-        {
-        	echo $table;
         }
 });
