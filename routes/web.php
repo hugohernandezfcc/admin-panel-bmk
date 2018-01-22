@@ -87,7 +87,7 @@ Route::get('/pruebaDB', function () {
 		echo $columns;
 		*/
 
-		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
+		$allTables = PostgresBuilder::getAllTables();
 
         foreach ($allTables as $table)
         {
@@ -102,7 +102,7 @@ Route::get('/pruebaDB', function () {
                 	{
                 		//$type = Schema::getColumnType($table, $column);
                     	//echo "[ ".$column." ]"." - type [ ".$type." ]"."<br>";
-                    	echo "Yes, column ".$column.Schema::getColumnType($table, $column)." in table : ".$table." exist !"."<br>";
+                    	echo "Yes, column ".$column." in table : ".$table." exist !"."<br>";
                 	}
                     
                     echo "[ ".$column." ]"."<br>";
