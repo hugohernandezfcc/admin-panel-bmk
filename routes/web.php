@@ -86,7 +86,12 @@ Route::get('/pruebaDB', function () {
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
 		*/
+		$table = 'privacy_statement';
 
-		$columns = Schema::getColumnListing('privacy_statement');
-		echo $columns;
+		if(Schema::getColumnListing('privacy_statement')
+		{
+			echo 'Yes, table : '.$table.' exist !';
+		}
+		else
+			echo 'Your table not exist !';
 });
