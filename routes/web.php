@@ -98,7 +98,7 @@ Route::get('/pruebaDB', function () {
                 $columns = Schema::getColumnListing($table);
                 foreach ($columns as $column)
                 {
-                    $type = Schema::getColumnType($table, $column);
+                    //$type = Schema::getColumnType($table, $column);
                     echo "[ ".$column." ]"." - type [ ]"."<br>";
                 }
                  echo "<br>"."-----------------------"."<br>";
