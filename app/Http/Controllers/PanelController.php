@@ -61,10 +61,4 @@ class PanelController extends Controller
         $medicos = DB::table('professional_information')->get();
         return view('medicos', ['medicos'=>$medicos]);
     }
-
-    public function getColumns()
-    {
-        $columns = \Schema::getColumnListing('privacy_statement');
-        return view('medicos',['medicos'=>$columns])
-    }
 }

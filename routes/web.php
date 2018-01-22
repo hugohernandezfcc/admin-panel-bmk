@@ -86,6 +86,6 @@ Route::get('/pruebaDB', function () {
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
 		*/
-});
 
-Route::get('/testDB', 'PanelController@getColumns')->name('getColumns');
+		$columns = Schema::getColumnListing('privacy_statement');
+});
