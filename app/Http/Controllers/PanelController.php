@@ -64,6 +64,19 @@ class PanelController extends Controller
 
     public function campos()
     {
-        
+        $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
+        $allColumns = array_map('table', ['title'=>'test', 'column'=>'field']);
+
+        foreach ($allTables as $table)
+        {
+            if(Schema::hasTable($table))
+            {
+                $columns = Schema::getColumnListing($table);
+                foreach ($columns as $column)
+                {
+                     
+                }
+            }
+        }
     }
 }
