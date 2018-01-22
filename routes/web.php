@@ -93,7 +93,7 @@ Route::get('/pruebaDB', function () {
         {
             if(Schema::hasTable($table))
             {
-                echo "Table: [ ".$table." ]"."<br>";
+                echo "Table: [ ".$table." ]"."<br>"."Columns:"."<br>";
 
                 $columns = Schema::getColumnListing($table);
                 foreach ($columns as $column)
@@ -106,12 +106,11 @@ Route::get('/pruebaDB', function () {
                     	echo "Column: ".$column." in table : ".$table." exist !"."<br>";
                 	}
                     */
-                    echo "[ ".$column." ]"."<br>";
+                    echo "    [ ".$column." ]"."<br>";
                 }
-                 echo "<br>"."-----------------------"."<br>";
+                 echo "<br>"."------------------------------------"."<br>";
             }
             else
                 echo "Your table -> ".$table." not exist !"."<br>";
         }
-
 });

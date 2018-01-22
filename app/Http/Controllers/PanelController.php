@@ -64,24 +64,6 @@ class PanelController extends Controller
 
     public function campos()
     {
-        $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
-
-        foreach ($allTables as $table)
-        {
-            if(Schema::hasTable($table))
-            {
-                echo "Yes, table : ".$table." exist !"."<br>";
-
-                $columns = Schema::getColumnListing($table);
-                foreach ($columns as $column)
-                {
-                    $type = Schema::getColumnType($table, $column);
-                    echo $type." ]"."<br>";
-                }
-                 echo "<br>"."-----------------------"."<br>";
-            }
-            else
-                echo "Your table -> ".$table." not exist !"."<br>";
-        }
+        
     }
 }
