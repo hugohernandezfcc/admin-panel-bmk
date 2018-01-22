@@ -91,6 +91,8 @@ Route::get('/pruebaDB', function () {
 		if(Schema::hasTable($table))
 		{
 			echo "Yes, table : ".$table." exist !";
+
+			$columns = Schema::getColumnListing($table);
 		}
 		else
 			echo "Your table not exist !";
