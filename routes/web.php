@@ -118,5 +118,8 @@ Route::get('/pruebaDB', function () {
         }
 
         $totalTableColumns = array_map(null, $allTableColumns, $allColumns);
-        echo $totalTableColumns;
+        foreach ($totalTableColumns as $table)
+        {
+        	echo $table;
+        }
 });
