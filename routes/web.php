@@ -120,4 +120,10 @@ Route::get('/pruebaDB', function () {
             else
                 echo "Your table -> ".$table." not exist !"."<br>";
         }
+
+        foreach ($allColumns as $column )
+        {
+        	echo $column['table']." Field: ".$column['field'];
+        }
+
 });
