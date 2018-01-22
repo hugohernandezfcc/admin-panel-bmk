@@ -107,7 +107,7 @@ Route::get('/pruebaDB', function () {
                     	echo "Column: ".$column." in table : ".$table." exist !"."<br>";
                 	}
                     */
-                	$allColumns = array_fill()[
+                	$allColumns[] = [
                 		[
                 			'table'=>$table,
                 			'field'=>$column
