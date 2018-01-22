@@ -88,7 +88,7 @@ Route::get('/pruebaDB', function () {
 		*/
 		$table = 'privacy_statement';
 
-		if(Schema::hasTable($table)
+		if(Schema::hasTable($table))
 		{
 			echo "Yes, table : ".$table." exist !";
 		}
