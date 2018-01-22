@@ -87,7 +87,7 @@ Route::get('/pruebaDB', function () {
 		echo $columns;
 		*/
 
-		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information");
+		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
 
         foreach ($allTables as $table)
         {
@@ -98,7 +98,8 @@ Route::get('/pruebaDB', function () {
                 $columns = Schema::getColumnListing($table);
                 foreach ($columns as $column)
                 {
-                    echo "[ ".$column." ]"."<br>";
+                    $type = Schema::getColumnType($table, $column);
+                    echo "[ ".$column." ]"." - type [ ".$type." ]"."<br>";
                 }
                  echo "<br>"."-----------------------"."<br>";
             }
