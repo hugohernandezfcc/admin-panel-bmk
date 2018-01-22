@@ -87,7 +87,7 @@ Route::get('/pruebaDB', function () {
 		echo $columns;
 		*/
 
-		$allTables = PostgresBuilder::getAllTables();
+		$allTables = Schema::getAllTables();
 
         foreach ($allTables as $table)
         {
