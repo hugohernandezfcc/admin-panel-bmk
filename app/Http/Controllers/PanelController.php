@@ -71,10 +71,6 @@ class PanelController extends Controller
             if(Schema::hasTable($table))
             {
                 $columns = Schema::getColumnListing($table);
-                foreach ($columns as $column)
-                {
-                     
-                }
             }
         }
     }

@@ -92,12 +92,13 @@ Route::get('/pruebaDB', function () {
 
         foreach ($allTables as $table)
         {
+        	/*
             if(Schema::hasTable($table))
             {
                 echo "Table: [ ".$table." ]"."<br>"."Columns:"."<br>";
 
                 $columns = Schema::getColumnListing($table);
-                $counter = 0;
+
                 foreach ($columns as $column)
                 {
                 	/*
@@ -108,24 +109,24 @@ Route::get('/pruebaDB', function () {
                     	echo "Column: ".$column." in table : ".$table." exist !"."<br>";
                 	}
                     */
-                	$allColumns[$counter] = [
-                		[
-                			'table'=>$table,
-                			'field'=>$column
-                		]
-                	];     	 
+                    /*
                     echo "[ ".$column." ]"."<br>";
-                    $counter = $counter+1;
                 }
                 echo "<br>"."------------------------------------"."<br>";
             }
             else
                 echo "Your table -> ".$table." not exist !"."<br>";
-        }
+            */
+            $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
+	        $campos = array();
 
-        foreach ($allColumns as $column )
-        {
-        	echo $column['table']." Field: ".$column['field'];
+	        foreach ($allTables as $table)
+	        {
+	            if(Schema::hasTable($table))
+	            {
+	                $columns = Schema::getColumnListing($table);
+	                $campos[] = ('table'=>$table, 'fields'=>$columns);
+	            }
+	        }
         }
-
 });
