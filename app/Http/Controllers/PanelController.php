@@ -61,4 +61,25 @@ class PanelController extends Controller
         $medicos = DB::table('professional_information')->get();
         return view('medicos', ['medicos'=>$medicos]);
     }
+
+    public function campos()
+    {
+        $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information");
+
+        foreach ($allTables as $table)
+        {
+            if(Schema::hasTable($table))
+            {
+                echo "Yes, table : ".$table." exist !";
+
+                $columns = Schema::getColumnListing($table);
+                foreach ($columns as $column)
+                {
+                    echo $column;
+                }
+            }
+            else
+                echo "Your table -> ".$table." not exist !";
+        }
+    }
 }

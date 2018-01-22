@@ -86,18 +86,23 @@ Route::get('/pruebaDB', function () {
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
 		*/
-		$table = 'privacy_statement';
 
-		if(Schema::hasTable($table))
-		{
-			echo "Yes, table : ".$table." exist !";
+		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information");
 
-			$columns = Schema::getColumnListing($table);
-			foreach ($columns as $column)
-			{
-				echo $column;
-			}
-		}
-		else
-			echo "Your table not exist !";
+        foreach ($allTables as $table)
+        {
+            if(Schema::hasTable($table))
+            {
+                echo "Yes, table : ".$table." exist !"."<br>";
+
+                $columns = Schema::getColumnListing($table);
+                foreach ($columns as $column)
+                {
+                    echo $column.;
+                }
+                 echo "<br><br>"."_____________";
+            }
+            else
+                echo "Your table -> ".$table." not exist !"."<br>";
+        }
 });
