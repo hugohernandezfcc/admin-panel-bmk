@@ -28,6 +28,8 @@ Route::get('/tickets-de-ayuda', 'PanelController@ticketsAyuda')->name('ticketsAy
 
 Route::get('/medicos', 'PanelController@medicos')->name('medicos');
 
+Route::get('/campos', 'PanelController@campos')->name('campos');
+
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
 Route::get('/pruebaDB', function () {
@@ -124,7 +126,8 @@ Route::get('/pruebaDB', function () {
             
         }
 
-        foreach ($allColumns as $columnN) {
+        foreach ($allColumns as $columnN)
+        {
         	echo $columnN['table'];
         }
 });

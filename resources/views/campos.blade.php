@@ -7,36 +7,30 @@
 @stop
 
 @section('content')
-
+            
+            @foreach ($tables as $key => $table)
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example" class="table table-bordered table-striped">
+              <table id="example" class="table table-bordered table-striped" title="$table">
                 <thead>
                 <tr>
-                  <th>Tabla</th>
+                  <th>Field</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($medicos as $key => $medico)
+                    @foreach ($campos as $key => $campo)
                         <tr>
-                            <td>{{ $medico -> schoolOfMedicine}}</td>
-                            <td>{{ $medico -> facultyOfSpecialization}}</td>
-                            <td>{{ $medico -> practiseProfessional}}</td>
-                            <td>{{ $medico -> user}}</td>
-                            <td>{{ $medico -> professional_license}}</td>
+                            <td>{{ $campo -> field}}</td>
                         </tr>
                     @endforeach
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>School of Medicine</th>
-                  <th>Faculty of Specialization</th>
-                  <th>Practise Professional</th>
-                  <th>User</th>
-                  <th>Professional License</th>
+                  <th>Field</th>
                 </tr>
                 </tfoot>
               </table>
             </div>
             <!-- /.box-body -->
+            @endforeach
 @stop
