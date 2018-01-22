@@ -76,7 +76,7 @@ class PanelController extends Controller
                 foreach ($columns as $column)
                 {
                     $type = Schema::getColumnType($table, $column);
-                    echo "[ ".$column." ]"." - type [ ".$type." ]"."<br>";
+                    echo $type." ]"."<br>";
                 }
                  echo "<br>"."-----------------------"."<br>";
             }
