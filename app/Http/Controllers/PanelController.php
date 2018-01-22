@@ -64,6 +64,7 @@ class PanelController extends Controller
 
     public function getColumns()
     {
-        echo $columns = Schema::getColumnListing('privacy_statement');
+        $columns = Schema::getColumnListing('privacy_statement');
+        return view('medicos',['medicos'=>$columns])
     }
 }
