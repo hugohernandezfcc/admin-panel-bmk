@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Schema;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\menu;
@@ -63,6 +64,6 @@ class PanelController extends Controller
 
     public function getColumns()
     {
-        return $this->getConnection()->getSchemaBuilder()->getColummListing($this->getTable());
+        echo $columns = Schema::getColumnListing('privacy_statement');
     }
 }

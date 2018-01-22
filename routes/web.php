@@ -86,7 +86,6 @@ Route::get('/pruebaDB', function () {
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
 		*/
-
-		$table = $this->getConnection()->getSchemaBuilder()->getColummListing($this->getTable());
-		echo $table;
 });
+
+Route::get('/testDB', 'PanelController@getColumns')->name('getColumns');
