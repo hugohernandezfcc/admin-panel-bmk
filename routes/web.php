@@ -93,6 +93,10 @@ Route::get('/pruebaDB', function () {
 			echo "Yes, table : ".$table." exist !";
 
 			$columns = Schema::getColumnListing($table);
+			foreach ($columns as $column)
+			{
+				echo $column;
+			}
 		}
 		else
 			echo "Your table not exist !";
