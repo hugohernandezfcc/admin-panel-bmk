@@ -99,7 +99,8 @@ Route::get('/pruebaDB', function () {
                 $columns = Schema::getColumnListing($table);
                 foreach ($columns as $column)
                 {
-                	$allColumns[] = $column;
+                	$allColumns['table'] = $table;
+                	$allColumns['field'] = $column;
                     echo "[ ".$column." ]"."<br>";
                 }
                  echo "<br>"."-----------------------"."<br>";
