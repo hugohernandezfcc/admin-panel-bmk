@@ -93,19 +93,19 @@ Route::get('/pruebaDB', function () {
         {
             if(Schema::hasTable($table))
             {
-                echo "Yes, table : ".$table." exist !"."<br>";
+                //echo "Table: ".$table." exist !"."<br>";
 
                 $columns = Schema::getColumnListing($table);
                 foreach ($columns as $column)
                 {
                 	if(Schema::hasColumn($table, $column))
                 	{
-                		$type = Schema::getType($table, $column);
+                		//$type = Schema::getColumnType($table, $column);
                     	//echo "[ ".$column." ]"." - type [ ".$type." ]"."<br>";
-                    	echo "Yes, column ".$column." in table : ".$table." exist !"."<br>";
+                    	echo "Column: ".$column." in table: ".$table."<br>";
                 	}
                     
-                    echo "[ ".$column." ]"."<br>";
+                    //echo "[ ".$column." ]"."<br>";
                 }
                  echo "<br>"."-----------------------"."<br>";
             }
