@@ -89,10 +89,11 @@ Route::get('/pruebaDB', function () {
 
 		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
 		$allColumns = array();
+		$i = 0;
 
         foreach ($allTables as $table)
         {
-        	/*
+        	
             if(Schema::hasTable($table))
             {
                 echo "Table: [ ".$table." ]"."<br>"."Columns:"."<br>";
@@ -101,32 +102,25 @@ Route::get('/pruebaDB', function () {
 
                 foreach ($columns as $column)
                 {
-                	/*
+                	
                 	if(Schema::hasColumn($table, $column))
                 	{
                 		//$type = Schema::getColumnType($table, $column);
                     	//echo "[ ".$column." ]"." - type [ ".$type." ]"."<br>";
                     	echo "Column: ".$column." in table : ".$table." exist !"."<br>";
+                    	$allColumns[$i]['table'] = $table;
+                    	$allColumns[$i]['field'] = $column;
+
+                    	$i++;
                 	}
-                    */
-                    /*
+                    
+                    
                     echo "[ ".$column." ]"."<br>";
                 }
                 echo "<br>"."------------------------------------"."<br>";
             }
             else
                 echo "Your table -> ".$table." not exist !"."<br>";
-            */
-            $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
-	        $campos = array();
-
-	        foreach ($allTables as $table)
-	        {
-	            if(Schema::hasTable($table))
-	            {
-	                $columns = Schema::getColumnListing($table);
-	                $campos[] = ('table'=>$table, 'fields'=>$columns);
-	            }
-	        }
+            
         }
 });
