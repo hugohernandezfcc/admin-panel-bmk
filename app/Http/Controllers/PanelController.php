@@ -64,7 +64,7 @@ class PanelController extends Controller
 
     public function campos()
     {      
-        $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
+        $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users");
         $allColumns = array();
         $i = 0;
 
