@@ -64,6 +64,7 @@ class PanelController extends Controller
 
     public function campos()
     {
+        /*
         $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
         $allColumns = array();
         $i = 0;
@@ -85,7 +86,7 @@ class PanelController extends Controller
                 }
             }
         }
-
-        return view('campos', ['variable1'=>'Gervacio', 'tables'=>$allTables, 'campos'=>$allColumns]);
+        */
+        return view('campos', ['variable1'=>'GT']);
     }
 }
