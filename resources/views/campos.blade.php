@@ -8,7 +8,7 @@
 
 @section('content')
     <h1>{{$variable1}}</h1>
-    @foreach ($tables as $table)
-        <h1>{{$table}}</h1>
+    @foreach ($tablas as $tabla)
+        <h2>{{$tabla}}</h2>
     @endforeach
 @stop
