@@ -8,7 +8,7 @@
 
 @section('content')
             
-            @foreach ($tables as $table)
-                <h1>{{table}}</h1>>
-            @endforeach
+            
+                <h1>Test</h1>>
+            
 @stop
