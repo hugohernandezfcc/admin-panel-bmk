@@ -8,7 +8,7 @@
 
 @section('content')
     @foreach ($tablas as $tabla)
-        <h2>{{$tabla}}</h2>
+        <h3>Tabla: {{$tabla}}</h3>
         <!-- /.box-header -->
         <div class="box-body">
           <table id="example" class="table table-bordered table-striped">
