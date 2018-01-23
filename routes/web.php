@@ -141,15 +141,15 @@ Route::get('/pruebaDB', function () {
         	echo $menu->column_name;
         }
 */
-        /*
+ 
         $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
 		$allColumns = array();
 		$i = 0;
 
         foreach ($allTables as $table)
         {
-        */
-        	$query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \'menus\';';
+        
+        	$query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \'$table\';';
             
             $columnListing = DB::select($query);
             
@@ -161,10 +161,10 @@ Route::get('/pruebaDB', function () {
                 	$allColumns[$i]['data_type'] = $column->data_type;
                 	$i++;
                     */
-            		echo "table: "." field: ".$column->column_name." type: ".$column->data_type;
+            		echo "table: "." field: ".$column->column_name." type: ".$column->data_type."<br>";
                 }
                 echo "<br>"."------------------------------------"."<br>";
-        //}
+        }
 /*
         foreach ($allColumns as $columnN)
         {
