@@ -8,7 +8,7 @@
 
 @section('content')
             
-            @foreach ($tables as $key => $table)
+            @foreach ($tables as $table)
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example" class="table table-bordered table-striped" title="$table">
@@ -19,9 +19,11 @@
                 </thead>
                 <tbody>
                     @foreach ($campos as $key => $campo)
+                        @if($campo['table']== $table)
                         <tr>
                             <td>{{ $campo -> field}}</td>
                         </tr>
+                        @endif
                     @endforeach
                 </tbody>
                 <tfoot>
