@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Database\Schema;
+use Illuminate\Database\Schema\Builder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\menu;
