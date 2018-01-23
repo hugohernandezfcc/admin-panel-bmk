@@ -85,6 +85,6 @@ class PanelController extends Controller
                 }
             }
         }
-        return view('campos',['campos'=>'campos','tables'=>'tablas']);
+        return view('campos');
     }
 }
