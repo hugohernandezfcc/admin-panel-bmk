@@ -170,7 +170,7 @@ Route::get('/pruebaDB', function () {
         	echo "[ table: ".$columnN['table']." field: ".$columnN['field']." data type: ".$columnN['data_type']." ]"."<br>";
         }
 */
-        $query = 'select * from information_schema.tables where table_schema = \'information_schema\';';
+        $query = 'select * from information_schema.tables where table_schema = \'public\';';
         echo $query;
         $allTables = DB::select($query);
 
