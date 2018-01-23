@@ -166,10 +166,10 @@ Route::get('/pruebaDB', function () {
             else
             	echo "Your table -> ".$table." not exist !"."<br>";
         }
-
+/*
         foreach ($allColumns as $columnN)
         {
         	echo "[ table: ".$columnN['table']." field: ".$columnN['field']." data type: ".$columnN['data_type']." ]";
         }
-
+*/
 });
