@@ -18,13 +18,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($campos as $key => $campo)
-                        @if($campo['table'] == $table)
-                        <tr>
-                            <td>{{ $campo -> field}}</td>
-                        </tr>
-                        @endif
-                    @endforeach
+                   
                 </tbody>
                 <tfoot>
                 <tr>
