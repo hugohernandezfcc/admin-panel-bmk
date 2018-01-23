@@ -152,8 +152,7 @@ Route::get('/pruebaDB', function () {
         	$query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \'menus\';';
             
             $columnListing = DB::select($query);
-            if(empty($columnListing))
-            {
+            
             	foreach ($columnListing as $column)
                 {
                 	/*
@@ -165,9 +164,6 @@ Route::get('/pruebaDB', function () {
             		echo "table: "." field: ".$column->column_name." type: ".$column->data_type;
                 }
                 echo "<br>"."------------------------------------"."<br>";
-            }
-            else
-            	echo "Your table -> "." not exist !"."<br>";
         //}
 /*
         foreach ($allColumns as $columnN)
