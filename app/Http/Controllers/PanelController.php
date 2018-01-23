@@ -73,7 +73,7 @@ class PanelController extends Controller
 
         foreach ($allTables as $table)
         {
-            
+            /*
             if(Schema::hasTable($table))
             {
                 $columns = Schema::getColumnListing($table);
@@ -87,6 +87,7 @@ class PanelController extends Controller
                     }
                 }
             }
+            */
         }
         
         return view('campos', ['variable1'=>'GT', 'tablas'=>$allTables]);
