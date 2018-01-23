@@ -85,6 +85,7 @@ class PanelController extends Controller
                 }
             }
         }
-        return view('campos');
+
+        return view('campos', ['variable1'=>'Gervacio']);
     }
 }

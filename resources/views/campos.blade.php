@@ -7,5 +7,5 @@
 @stop
 
 @section('content')
-    <h1>Campos Test</h1>
+    <h1>{{$variable1}}</h1>
 @stop
