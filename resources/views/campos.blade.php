@@ -11,7 +11,7 @@
             @foreach ($tables as $table)
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example" class="table table-bordered table-striped" title="$table">
+              <table id="example" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Field</th>
@@ -19,7 +19,7 @@
                 </thead>
                 <tbody>
                     @foreach ($campos as $key => $campo)
-                        @if($campo['table']== $table)
+                        @if($campo['table'] == $table)
                         <tr>
                             <td>{{ $campo -> field}}</td>
                         </tr>
