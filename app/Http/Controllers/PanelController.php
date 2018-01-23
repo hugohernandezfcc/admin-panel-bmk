@@ -81,8 +81,10 @@ class PanelController extends Controller
                 {
                     if(Schema::hasColumn($table, $column))
                     {
+                        $type = Schema::getColumnType($table, $column);
                         $allColumns[$i]['table'] = $table;
                         $allColumns[$i]['field'] = $column;
+                        $allColumns[$i]['type'] = $type;
                         $i++;
                     }
                 }
