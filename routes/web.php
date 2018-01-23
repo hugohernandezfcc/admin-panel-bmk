@@ -151,10 +151,6 @@ Route::get('/pruebaDB', function () {
             $columnListing = DB::select($query);
             if(empty($columnListing))
             {
-            	echo "Your table -> ".$table." not exist !"."<br>";
-            }
-            else
-            {
             	foreach ($columnListing as $column)
                 {
                 		$allColumns[$i]['table'] = $table;
@@ -164,6 +160,8 @@ Route::get('/pruebaDB', function () {
                 }
                 echo "<br>"."------------------------------------"."<br>";
             }
+            else
+            	echo "Your table -> ".$table." not exist !"."<br>";
         }
 
         foreach ($allColumns as $columnN)
