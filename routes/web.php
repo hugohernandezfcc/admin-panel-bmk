@@ -167,7 +167,7 @@ Route::get('/pruebaDB', function () {
                 echo "<br>"."------------------------------------"."<br>";
             }
             else
-            	echo "Your table -> ".$table." not exist !"."<br>";
+            	echo "Your table -> "." not exist !"."<br>";
         //}
 /*
         foreach ($allColumns as $columnN)
