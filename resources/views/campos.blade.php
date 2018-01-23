@@ -11,10 +11,10 @@
     @foreach ($tablas as $tabla)
         <!-- /.box-header -->
         <div class="box-body">
-          <table id="example" class="table table-bordered table-striped" title="Campos de la tabla $tabla">
-            <thead>
+          <table id="example" class="table table-bordered table-striped">
+            <thead title="$tabla">
             <tr>
-              <th>Field</th>
+              <th>Fields</th>
             </tr>
             </thead>
             <tbody>
@@ -28,11 +28,7 @@
             </tbody>
             <tfoot>
             <tr>
-              <th>School of Medicine</th>
-              <th>Faculty of Specialization</th>
-              <th>Practise Professional</th>
-              <th>User</th>
-              <th>Professional License</th>
+              <th>Fields</th>
             </tr>
             </tfoot>
           </table>
