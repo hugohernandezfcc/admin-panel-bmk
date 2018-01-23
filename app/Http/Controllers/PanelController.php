@@ -64,13 +64,17 @@ class PanelController extends Controller
 
     public function campos()
     {      
-        $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users");
+        $query = 'select * from information_schema.tables where table_schema = \'public\';';
+        echo $query;
+        $allTables = DB::select($query);
+
+        //$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users");
         $allColumns = array();
         $i = 0;
 
         foreach ($allTables as $table)
         {
-            $query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \''.$table.'\';';
+            $query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \''.$table->table_name.'\';';
             $columnListing = DB::select($query);
 
             if(!empty($columnListing))
