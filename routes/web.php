@@ -28,7 +28,7 @@ Route::get('/tickets-de-ayuda', 'PanelController@ticketsAyuda')->name('ticketsAy
 
 Route::get('/medicos', 'PanelController@medicos')->name('medicos');
 
-Route::get('/campos', 'PanelController@campos')->name('campos');
+Route::get('/campos', 'PanelController@prueba')->name('prueba');
 
 Route::get('/prueba', 'PanelController@prueba')->name('prueba');
 
