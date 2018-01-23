@@ -9,7 +9,6 @@ use App\privacy_statement;
 use App\SupportTycket;
 use App\professional_information;
 use DB;
-use Illuminate\Database\Schema;
 use Illuminate\Support\Facades\Schema;
 
 class PanelController extends Controller
@@ -73,7 +72,7 @@ class PanelController extends Controller
 
         foreach ($allTables as $table)
         {
-            /*
+            
             if(Schema::hasTable($table))
             {
                 $columns = Schema::getColumnListing($table);
@@ -87,7 +86,7 @@ class PanelController extends Controller
                     }
                 }
             }
-            */
+            
         }
         
         return view('campos', ['variable1'=>'GT', 'tablas'=>$allTables]);
