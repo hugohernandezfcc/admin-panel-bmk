@@ -11,7 +11,7 @@
     @foreach ($tablas as $tabla)
         <h2>{{$tabla}}</h2>
         @foreach ($campos as $campo)
-            @if($campo['tabla']==$tabla)
+            @if($campo['table']==$tabla)
               <h2>{{$campo['field']}}</h2>
             @endif
         @endforeach
