@@ -148,6 +148,7 @@ Route::get('/pruebaDB', function () {
         foreach ($allTables as $table)
         {
         	$query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \''.$table.'\';';
+            echo $query;
             $columnListing = DB::select($query);
             if(!empty($columnListing))
             {
