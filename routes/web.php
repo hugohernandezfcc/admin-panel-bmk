@@ -159,7 +159,7 @@ Route::get('/pruebaDB', function () {
                     	$allColumns[$i]['data_type'] = $column->data_type;
                     	$i++;
                 }
-                echo "<br>"."------------------------------------"."<br>";
+                //echo "<br>"."------------------------------------"."<br>";
             }
             else
             	echo "Your table -> ".$table." not exist !"."<br>";
@@ -167,7 +167,7 @@ Route::get('/pruebaDB', function () {
 
         foreach ($allColumns as $columnN)
         {
-        	echo "[ table: ".$columnN['table']." field: ".$columnN['field']." data type: ".$columnN['data_type']." ]";
+        	echo "[ table: ".$columnN['table']." field: ".$columnN['field']." data type: ".$columnN['data_type']." ]"."<br>";
         }
 
 });
