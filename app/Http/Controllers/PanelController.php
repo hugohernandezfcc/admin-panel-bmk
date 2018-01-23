@@ -66,7 +66,7 @@ class PanelController extends Controller
     {
         
         $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
-        /*
+        
         $allColumns = array();
         $i = 0;
 
@@ -87,7 +87,7 @@ class PanelController extends Controller
                 }
             }
         }
-        */
+        
         return view('campos', ['variable1'=>'GT', 'tablas'=>$allTables]);
     }
 }
