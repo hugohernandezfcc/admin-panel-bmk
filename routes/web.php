@@ -141,6 +141,7 @@ Route::get('/pruebaDB', function () {
         	echo $menu->column_name;
         }
 */
+/*
         $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
 		$allColumns = array();
 		$i = 0;
@@ -168,5 +169,13 @@ Route::get('/pruebaDB', function () {
         {
         	echo "[ table: ".$columnN['table']." field: ".$columnN['field']." data type: ".$columnN['data_type']." ]"."<br>";
         }
+*/
+        $query = 'select * from information_schema.tables where table_schema = \'information_schema\';';
+        echo $query;
+        $allTables = DB::select($query);
 
+        foreach ($allTables as $table)
+        {
+        	echo $menu->table_name;
+        }
 });
