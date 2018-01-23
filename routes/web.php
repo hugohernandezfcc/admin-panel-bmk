@@ -176,6 +176,6 @@ Route::get('/pruebaDB', function () {
 
         foreach ($allTables as $table)
         {
-        	echo $menu->table_name;
+        	echo $table->table_name;
         }
 });
