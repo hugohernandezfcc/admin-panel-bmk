@@ -7,12 +7,12 @@
 @stop
 
 @section('content')
-    <h1>{{$variable1}}</h1>
     @foreach ($tablas as $tabla)
+        <h2>{{$tabla}}</h2>
         <!-- /.box-header -->
         <div class="box-body">
           <table id="example" class="table table-bordered table-striped">
-            <thead title="$tabla">
+            <thead>
             <tr>
               <th>Fields</th>
             </tr>
@@ -28,11 +28,12 @@
             </tbody>
             <tfoot>
             <tr>
-              <th>Fields</th>
+              <th></th>
             </tr>
             </tfoot>
           </table>
         </div>
+        </br>
         <!-- /.box-body -->
     @endforeach
 @stop

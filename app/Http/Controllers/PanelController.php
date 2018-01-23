@@ -90,6 +90,6 @@ class PanelController extends Controller
             
         }
         
-        return view('campos', ['variable1'=>'GT', 'tablas'=>$allTables, 'campos'=>$allColumns]);
+        return view('campos', ['tablas'=>$allTables, 'campos'=>$allColumns]);
     }
 }
