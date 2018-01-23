@@ -11,4 +11,8 @@
     @foreach ($tables as $table)
         <h1>{{$table}}</h1>
     @endforeach
+
+    @foreach ($campos as $campo)
+        <h1>{{$campo}}</h1>
+    @endforeach
 @stop
