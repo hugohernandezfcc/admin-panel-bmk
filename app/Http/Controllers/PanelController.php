@@ -11,7 +11,7 @@ use App\professional_information;
 use DB;
 use Illuminate\Support\Facades\Schema;
 
-class PanelController extends Controller
+class PanelController extends ControllerP
 {
     /**
      * Create a new controller instance.
@@ -81,7 +81,7 @@ class PanelController extends Controller
                 {
                     if(Schema::hasColumn($table, $column))
                     {
-                        $type = Schema::getColumnType($table, $column);
+                        $type = Schema::getType($table, $column);
                         $allColumns[$i]['table'] = $table;
                         $allColumns[$i]['field'] = $column;
                         $allColumns[$i]['type'] = $type;
