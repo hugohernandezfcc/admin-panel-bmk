@@ -162,7 +162,7 @@ Route::get('/pruebaDB', function () {
                 	$allColumns[$i]['data_type'] = $column->data_type;
                 	$i++;
                     */
-            		echo "table: ".$table." field: ".$column->column_name." type: ".$column->data_type;
+            		echo "table: "." field: ".$column->column_name." type: ".$column->data_type;
                 }
                 echo "<br>"."------------------------------------"."<br>";
             }
