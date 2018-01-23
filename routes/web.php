@@ -131,7 +131,7 @@ Route::get('/pruebaDB', function () {
         	echo $columnN['table'];
         }
         */
-        $query = 'select column_name, data_type from information_schema.columns where table_schema = '\'public'\' and table_name = '\'menus'\';'
+        $query = 'select column_name, data_type from information_schema.columns where table_schema = '\'public'\' and table_name = '\'menus'\';';
         echo $query;
         //$menus = DB::select();
 /*
