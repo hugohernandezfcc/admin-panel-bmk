@@ -159,7 +159,6 @@ Route::get('/pruebaDB', function () {
                     	$allColumns[$i]['data_type'] = $column->data_type;
                     	$i++;
                 }
-                //echo "<br>"."------------------------------------"."<br>";
             }
             else
             	echo "Your table -> ".$table." not exist !"."<br>";

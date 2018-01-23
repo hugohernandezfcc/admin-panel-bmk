@@ -63,35 +63,28 @@ class PanelController extends Controller
     }
 
     public function campos()
-    {
-        
+    {      
         $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
-        
         $allColumns = array();
         $i = 0;
 
         foreach ($allTables as $table)
         {
-            
+            $query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \''.$table.'\';';
+            echo $query;
+            $columnListing = DB::select($query);
 
-            if(Schema::hasTable($table))
+            if(!empty($columnListing))
             {
-                $columns = Schema::getColumnListing($table);
-                foreach ($columns as $column)
+                foreach ($columnListing as $column)
                 {
-                    if(Schema::hasColumn($table, $column))
-                    {
-                        $type = Schema::getColumnType($table, $column);
-                        $allColumns[$i]['table'] = $table;
-                        $allColumns[$i]['field'] = $column;
-                        $allColumns[$i]['type'] = $type;
-                        $i++;
-                    }
+                    $allColumns[$i]['table'] = $table;
+                    $allColumns[$i]['field'] = $column->column_name;
+                    $allColumns[$i]['data_type'] = $column->data_type;
+                    $i++;
                 }
             }
-            
         }
-        
         return view('campos', ['tablas'=>$allTables, 'campos'=>$allColumns]);
     }
 }

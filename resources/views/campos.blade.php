@@ -14,7 +14,8 @@
           <table id="example" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Fields</th>
+              <th>Field</th>
+              <th>Data Type</th>
             </tr>
             </thead>
             <tbody>
@@ -22,13 +23,15 @@
                     @if($campo['table']==$tabla)
                         <tr>
                             <td>{{ $campo['field']}}</td>
+                            <td>{{ $campo['data_type']}}</td>
                         </tr>
                     @endif
                 @endforeach
             </tbody>
             <tfoot>
             <tr>
-              <th></th>
+              <th>Field</th>
+              <th>Data Type</th>
             </tr>
             </tfoot>
           </table>
