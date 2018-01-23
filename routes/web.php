@@ -88,7 +88,7 @@ Route::get('/pruebaDB', function () {
 		$columns = DB::getSchemaBuilder()->getColumnListing('menus');
 		echo $columns;
 		*/
-
+		/*
 		$allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
 		$allColumns = array();
 		$i = 0;
@@ -130,4 +130,12 @@ Route::get('/pruebaDB', function () {
         {
         	echo $columnN['table'];
         }
+        */
+        $menus = DB::select('select column_name, data_type from menus');
+
+        foreach ($menus as $menu)
+        {
+        	echo $menu['column_name']." - ".$menu['data_type'];
+        }
+
 });
