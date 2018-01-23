@@ -149,7 +149,11 @@ Route::get('/pruebaDB', function () {
         {
         	$query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \'$table\';';
             $columnListing = DB::select($query);
-            if(!$columnListing)
+            if(empty($columnListing))
+            {
+            	echo "Your table -> ".$table." not exist !"."<br>";
+            }
+            else
             {
             	foreach ($columnListing as $column)
                 {
@@ -160,8 +164,6 @@ Route::get('/pruebaDB', function () {
                 }
                 echo "<br>"."------------------------------------"."<br>";
             }
-            else
-            	echo "Your table -> ".$table." not exist !"."<br>";
         }
 
         foreach ($allColumns as $columnN)
