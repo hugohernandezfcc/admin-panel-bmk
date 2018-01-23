@@ -140,4 +140,32 @@ Route::get('/pruebaDB', function () {
         	echo $menu->column_name;
         }
 
+        $allTables = array("menus", "privacy_statement", "support_tickets", "professional_information", "users", "medicos");
+		$allColumns = array();
+		$i = 0;
+
+        foreach ($allTables as $table)
+        {
+        	$query = 'select column_name, data_type from information_schema.columns where table_schema = \'public\' and table_name = \'$table\';';
+            $columnListing
+            if(!empty($columnListing))
+            {
+            	foreach ($columnListing as $column)
+                {
+                		$allColumns[$i]['table'] = $table;
+                    	$allColumns[$i]['field'] = $column->column_name;
+                    	$allColumns[$i]['data_type'] = $column->data_type;
+                    	$i++;
+                }
+                echo "<br>"."------------------------------------"."<br>";
+            }
+            else
+            	echo "Your table -> ".$table." not exist !"."<br>";
+        }
+
+        foreach ($allColumns as $columnN)
+        {
+        	echo "[ table: ".$columnN['table']." field: ".$columnN['field']." data type: ".$columnN['data_type']." ]";
+        }
+
 });
